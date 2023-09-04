@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+  padding: 50px;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+[data-theme="hawaii"] {
+  --header-bg-col: coral;
+  --header-col: white;
+}
+
+[data-theme="dark"] {
+  --header-bg-col: rgb(34, 30, 34);
+  --header-col: rgb(186, 186, 186);
+}
+
+[data-theme="light"] {
+  --header-bg-col: rgb(214, 185, 214);
+  --header-col: rgb(45, 45, 45);
+}
+
+header {
+  background-color: var(--header-bg-col);
+  color: var(--header-col);
+  display: flex;
+  place-content: space-between;
+}
+
+.menu {
+  display: flex;
+  height: 20px;
+  gap: 10px;
+}
