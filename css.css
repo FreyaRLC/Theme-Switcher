@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Lato', sans-serif; */
+
 header,
 main,
 footer {
@@ -18,25 +23,86 @@ h3 {
 }
 
 [data-theme="hawaii"] {
-  --header-bg-col: coral;
-  --header-col: white;
+  --big-texts: "Cabin Sketch";
+  --header-bg-col: #79c2d0;
+  --main-bg-col: #bbe4e9;
+  --footer-bg-col: #bbe4e9;
+  --header-text-col: #3a7d9f;
+  --main-text-col: #5585b5;
+  --footer-text-col: #e36959;
+  --border: #def6f9 2px solid;
 }
 
 [data-theme="dark"] {
+  --big-texts: "Abril Fatface";
   --header-bg-col: rgb(34, 30, 34);
-  --header-col: rgb(186, 186, 186);
+  --main-bg-col: rgb(47, 43, 47);
+  --footer-bg-col: rgb(60, 55, 60);
+  --header-text-col: rgb(186, 186, 186);
+  --main-text-col: rgb(186, 186, 186);
+  --footer-text-col: rgb(122, 104, 138);
+  --border: #262427 2px solid;
 }
 
 [data-theme="light"] {
+  --big-texts: "Fredericka the Great";
   --header-bg-col: rgb(214, 185, 214);
-  --header-col: rgb(45, 45, 45);
+  --main-bg-col: rgb(214, 185, 214);
+  --footer-bg-col: rgb(214, 185, 214);
+  --header-text-col: rgb(45, 45, 45);
+  --main-text-col: rgb(45, 45, 45);
+  --footer-text-col: rgb(45, 45, 45);
+  --border: #a496ab 2px solid;
 }
 
 header {
   background-color: var(--header-bg-col);
-  color: var(--header-col);
+  color: var(--header-text-col);
   display: flex;
   place-content: space-between;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  background-color: var(--main-bg-col);
+  color: var(--main-text-col);
+  flex-grow: 1;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+footer {
+  background-color: var(--footer-bg-col);
+  color: var(--footer-text-col);
+}
+
+h1,
+h2 {
+  font-family: var(--big-texts);
+}
+
+h1 {
+  font-size: 3.3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: arial;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+body p {
+  font-family: "Lato", sans-serif;
 }
 
 .menu {
